@@ -1,0 +1,29 @@
+<div class="container d-xl-flex align-items-xl-center" style="margin-top: 20px;">
+    <h4 class="text-secondary flex-fill">New User ?</h4>
+</div>
+<hr>
+<section style="min-height: 561px;">
+    <div class="container" style="margin-top: 15px;margin-bottom: 41px;">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 col-xl-6">
+                <div class="card shadow-sm">
+                    <div class="card-header">
+                        <h5 class="mb-0">New User</h5>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="SignUpForm" (ngSubmit)="onSubmit()">
+                            <div class="form-group"><label>Trainer&#39;s Name</label><input type="text" class="form-control" placeholder="Enter Your Name" formControlName="TrainerName" required /></div>
+                            <div class="form-group"><label>Mobile</label><input type="text" class="form-control" placeholder="Enter 10 Digit Mobile NUmber" formControlName="Mobile" required maxlength="10" pattern="[6789][0-9]{9}" /></div>
+                            <div class="form-group"><label>Email</label><input type="text" class="form-control" placeholder="Enter Address" formControlName="Email" required /></div>
+                            <div class="form-group"><label>Password</label><input type="text" class="form-control" placeholder="# # #" formControlName="PWD" required /></div>
+                            <div class="form-group"><label>Re-Enter Password</label><input type="text" class="form-control" placeholder="# # #" formControlName="REPWD" #REPWD  required /></div>
+                            <div class="form-group text-danger">{{Error}}</div>
+                            
+                            <div class="form-group"><button  class="btn btn-primary" type="submit">Save</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
